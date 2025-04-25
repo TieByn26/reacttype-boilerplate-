@@ -1,8 +1,19 @@
 import React from "react";
 
+import {
+    Successful,
+    CircleCheckmark,
+    CircleInfo,
+    CircleWarn,
+    CircleXmark
+} from "."
 
 const icon = {
-
+  Successful,
+  CircleCheckmark,
+  CircleInfo,
+  CircleWarn,
+  CircleXmark
 } satisfies Record<string, React.FunctionComponent<React.SVGProps<SVGSVGElement>>>;
 
 type ReactIconProps = React.SVGProps<SVGSVGElement> & {
@@ -21,11 +32,11 @@ export const LocalIcon = ({
   ...props
 }: ReactIconProps) => {
   const Comp = icon[iconName];
-//   return Comp ? (
-//     <Comp
-//       {...(height !== "auto" && { height })}
-//       {...(width !== "auto" && { width })}
-//       {...props}
-//     />
-//   ) : null;
+  return Comp ? (
+    <Comp
+      {...(height !== "auto" && { height })}
+      {...(width !== "auto" && { width })}
+      {...props}
+    />
+  ) : null;
 };
