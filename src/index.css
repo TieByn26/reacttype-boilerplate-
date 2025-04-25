@@ -2,6 +2,19 @@
 @import "tailwindcss";
 
 @layer base {
+  @theme {
+    --font-montserrat: "Montserrat", "sans-serif";
+    /* --animate-wave: wave 1.5s ease-in-out infinite alternate;
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    } */
+  }
   html {
     scroll-behavior: smooth;
   }
